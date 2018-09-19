@@ -10,7 +10,7 @@ import { Product } from '../../models/product';
 export class ProductsComponent implements OnInit {
 
   products = [];
-  editing: boolean = false;
+  editing = false;
   editingProduct: Product;
 
   constructor(public productService: ProductService) { }
@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.productService.getProducts().subscribe(products => {
       this.products = products;
-    });    
+    });
   }
 
   deleteProduct(event, product) {

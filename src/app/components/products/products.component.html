@@ -9,10 +9,10 @@
       </button>
 
       <button (click)="editProduct($event, p)">
-       Edit 
+       Edit
       </button>
       <div *ngIf="editing && editingProduct.id == p.id">
-        <form (ngSubmit)="updateProduct(product)">
+        <form (ngSubmit)="updateProduct(p)">
           <input type="text" name="name" [(ngModel)]="editingProduct.name">
           <input type="text" name="description" [(ngModel)]="editingProduct.description">
           <input type="text" name="price" [(ngModel)]="editingProduct.price">
