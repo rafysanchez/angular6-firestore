@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from "../../services/product.service";
+import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
 
 @Component({
@@ -17,6 +17,7 @@ export class ProductFormComponent implements OnInit {
   }
 
   addProduct() {
+    // tslint:disable-next-line:triple-equals
     if (this.product.name !== '' && this.product.price != 0 && this.product.description != '') {
       this.productService.addProduct(this.product);
       this.product = {} as Product;
